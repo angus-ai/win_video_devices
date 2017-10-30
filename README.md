@@ -4,8 +4,8 @@ Retrieve the index and name of video devices connected to your Windows computer 
 
 ## Prerequisites
 
-* Visual Studio 2015 (required for all Python versions, see notes below)
-* CMake >= 3.1udio 2015
+* Visual Studio 2015 (required for all Python versions)
+* CMake >= 3.1
 
 ## Installation
 
@@ -19,3 +19,13 @@ pip install .
 
 With the `setup.py` file included in this project, the `pip install` command will
 invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
+
+## Testing
+
+You can launch a python interpreter and run:
+
+```python
+import win_devices
+dev = win_devices.get_devices()
+print(dev)
+```
