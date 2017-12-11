@@ -59,7 +59,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='win_devices',
-    version='0.0.1',
+    version='0.0.2',
     author='Raphael Lumbroso',
     author_email='raphael.lumbroso@angus.ai',
     description='A module to return video devices connected to a Windows computer',
