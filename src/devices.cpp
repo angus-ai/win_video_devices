@@ -109,7 +109,7 @@ std::vector<std::pair<int, std::string>> DisplayDeviceInformation(IEnumMoniker *
 
 std::vector<std::pair<int, std::string>> get_devices()
 {
-    HRESULT hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
+    HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
     std::vector<std::pair<int, std::string>> tt;
     if (SUCCEEDED(hr))
     {
@@ -129,7 +129,7 @@ std::vector<std::pair<int, std::string>> get_devices()
 
 void main()
 {
-    HRESULT hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
+    HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
     if (SUCCEEDED(hr))
     {
         IEnumMoniker *pEnum;
